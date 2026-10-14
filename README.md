@@ -120,6 +120,13 @@ reference values; true missing values do not. One target buoy and one offshore
 neighbor do not establish generalization to other regions. Repeated masking expands
 training contexts, not the number of independent measurements.
 
+## See what the Transformer predicts
+
+[View the paired reconstruction experiment](reports/paired_comparison/): a fixed
+24-hour outage, predictions against the hidden answer, and a comparison across
+256 validation windows. The current Transformer has higher error than interpolation
+on these windows; model complexity has not yet translated into better accuracy.
+
 ## Project map
 
 | Location | Purpose |

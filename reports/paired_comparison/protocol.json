@@ -1,0 +1,14 @@
+{
+  "year": 2024,
+  "split": "validation (already used for checkpoint selection)",
+  "samples_requested": 256,
+  "windows_used": 256,
+  "excluded_no_interpolation_support": 0,
+  "example_window_id": 2,
+  "example_selection": "first index-ordered 24h window with finite immediate endpoints",
+  "checkpoint_sha256": "857de8cd9bd6668509628d876842951e1e7225b840f85e59052b0cbf16c05ff0",
+  "context_hours": 128,
+  "mask_seed": 777,
+  "comparison": "same hidden labels and target context; Transformer additionally uses weather and neighbor channels",
+  "no_retraining": true
+}
