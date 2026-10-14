@@ -95,3 +95,57 @@ def quality_report(frame):
                                    'longest_missing_hours': int(runs.max()) if len(runs) else 0,
                                    'observed_count': int((~missing).sum())}
     return result
+
+
+def parse_ndbc_netcdf(path):
+    """Read NOAA THREDDS classic NetCDF; honor per-variable fill metadata."""
+    from scipy.io import netcdf_file
+    with netcdf_file(path, mmap=False) as dataset:
+        clock = dataset.variables['time']
+        if clock.units != b'seconds since 1970-01-01 00:00:00 UTC':
+            raise ValueError(f'Unsupported time units: {clock.units!r}')
+        index = pd.to_datetime(clock[:].copy(), unit='s', utc=True)
+        columns = {}
+        for name, variable in dataset.variables.items():
+            if name in {'time', 'latitude', 'longitude'}:
+                continue
+            if variable.shape != (len(index), 1, 1):
+                raise ValueError(f'Unexpected station dimensions for {name}')
+            values = variable[:].copy().reshape(-1).astype(float)
+            fill = getattr(variable, '_FillValue', None)
+            if fill is not None:
+                values[values == fill] = np.nan
+            key = variable.short_name.decode().upper()
+            columns[key] = values
+        frame = pd.DataFrame(columns, index=pd.DatetimeIndex(index, name='time'))
+    if frame.index.has_duplicates:
+        raise ValueError('Duplicate NetCDF timestamps')
+    return frame.sort_index()
+
+
+def download_thredds(station, year, directory):
+    """Official alternative archive; does not substitute synthetic data."""
+    if not re.fullmatch(r'[a-zA-Z0-9]{5}', station) or not 1970 <= year <= 2100:
+        raise ValueError('Invalid station/year')
+    station = station.lower()
+    directory = Path(directory)
+    directory.mkdir(parents=True, exist_ok=True)
+    raw = directory / f'{station}h{year}.nc'
+    url = f'https://dods.ndbc.noaa.gov/thredds/fileServer/data/stdmet/{station}/{station}h{year}.nc'
+    if not raw.exists():
+        with urlopen(url, timeout=60) as response:
+            payload = response.read()
+        temporary = raw.with_suffix('.nc.part')
+        temporary.write_bytes(payload)
+        try:
+            parse_ndbc_netcdf(temporary)
+            temporary.replace(raw)
+        finally:
+            temporary.unlink(missing_ok=True)
+    frame = parse_ndbc_netcdf(raw)
+    frame.to_csv(directory / f'{station}h{year}.csv')
+    metadata = {'source': url, 'sha256': hashlib.sha256(raw.read_bytes()).hexdigest(),
+                'station': station, 'year': year, 'rows': len(frame), 'format': 'netcdf',
+                'download_or_cache_check_utc': pd.Timestamp.now(tz='UTC').isoformat()}
+    raw.with_suffix('.json').write_text(json.dumps(metadata, indent=2))
+    return frame

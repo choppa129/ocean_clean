@@ -3,7 +3,7 @@ import json
 import hashlib
 from importlib.metadata import version
 from pathlib import Path
-from .data import download, load_csv, hourly, quality_report
+from .data import download, download_thredds, load_csv, hourly, quality_report
 from .benchmark import evaluate
 
 
@@ -14,6 +14,7 @@ def main():
     fetch.add_argument('--station', required=True)
     fetch.add_argument('--year', type=int, required=True)
     fetch.add_argument('--out', default='data/raw')
+    fetch.add_argument('--source', choices=['text', 'thredds'], default='text')
     for name in ['quality', 'benchmark']:
         p = commands.add_parser(name)
         p.add_argument('--csv', required=True)
@@ -25,7 +26,8 @@ def main():
             p.add_argument('--scenario', choices=['sensor','station'], default='sensor')
     args = parser.parse_args()
     if args.command == 'download':
-        frame = download(args.station, args.year, args.out)
+        loader = download_thredds if args.source == 'thredds' else download
+        frame = loader(args.station, args.year, args.out)
         print(f'Downloaded/loaded {len(frame)} observations')
         return
     frame = hourly(load_csv(args.csv))

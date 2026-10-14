@@ -3,11 +3,17 @@
 Reproducible **offline gap reconstruction** for ocean buoy time series.
 
 **Status:** initial data pipeline and baseline benchmark. No claimed research novelty,
-no trained deep model, and no real-world accuracy claims yet.
+no trained deep model. First real-data offline reconstruction results are available below.
 
 Can weather observations help reconstruct missing sea-water temperature? When do
 long outages make simple interpolation unreliable? This repository establishes a
 controlled benchmark before adding neighboring buoys and learned reliability weights.
+
+## First real-data results
+
+[41009 / 2024 experiment report](reports/first_experiment/README.md): 52,692 raw
+observations, two outage scenarios, three seeds. Linear interpolation outperformed
+the initial learned baseline. See the report for training-budget and evaluation limits.
 
 ## Quick start
 
@@ -17,14 +23,14 @@ Python 3.10+:
 python -m venv .venv
 source .venv/bin/activate
 pip install -e .
-ocean-clean download --station 41009 --year 2024
+ocean-clean download --station 41009 --year 2024 --source thredds
 ocean-clean quality --csv data/raw/41009h2024.csv
 ocean-clean benchmark --csv data/raw/41009h2024.csv --scenario sensor
 ocean-clean benchmark --csv data/raw/41009h2024.csv --scenario station --out outputs/station
 python -m unittest discover -s tests -v
 ```
 
-41009/2024 is a candidate archive, not a validated station selection. Download needs
+41009/2024 was downloaded and audited for the first pilot. Download needs
 network access to NOAA. A failed download raises an error; no synthetic data is
 substituted. Raw archives are cached with their source URL and SHA-256 checksum.
 

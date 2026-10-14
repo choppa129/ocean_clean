@@ -40,6 +40,29 @@ class PipelineTests(unittest.TestCase):
         self.assertTrue(np.isfinite(metrics[['mae','rmse']].values).all())
         self.assertEqual(set(pred.split), {'validation','test'})
 
+    def test_netcdf_fill_values(self):
+        import tempfile
+        from pathlib import Path
+        from scipy.io import netcdf_file
+        from ocean_clean.data import parse_ndbc_netcdf
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / 'sample.nc'
+            with netcdf_file(path, 'w') as f:
+                f.createDimension('time', 2)
+                f.createDimension('latitude', 1)
+                f.createDimension('longitude', 1)
+                t = f.createVariable('time', 'i', ('time',))
+                t.units = 'seconds since 1970-01-01 00:00:00 UTC'
+                t[:] = [0,3600]
+                v = f.createVariable('water', 'f', ('time','latitude','longitude'))
+                v.short_name = 'wtmp'
+                v._FillValue = np.float32(999)
+                v[:] = np.array([20,999]).reshape(2,1,1)
+            result = parse_ndbc_netcdf(path)
+            self.assertEqual(result.WTMP.iloc[0],20)
+            self.assertTrue(np.isnan(result.WTMP.iloc[1]))
+            self.assertEqual(str(result.index.tz),'UTC')
+
     def test_quality_missing_hours(self):
         f = self.frame.drop(self.frame.index[3:7])
         self.assertEqual(quality_report(hourly(f))['variables']['WTMP']['longest_missing_hours'],4)

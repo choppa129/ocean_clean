@@ -1,0 +1,62 @@
+{
+  "rows": 8784,
+  "start": "2024-01-01 00:00:00+00:00",
+  "end": "2024-12-31 23:00:00+00:00",
+  "variables": {
+    "WSPD": {
+      "missing_fraction": 0.0,
+      "longest_missing_hours": 0,
+      "observed_count": 8784
+    },
+    "GST": {
+      "missing_fraction": 0.0,
+      "longest_missing_hours": 0,
+      "observed_count": 8784
+    },
+    "WVHT": {
+      "missing_fraction": 0.0014799635701275046,
+      "longest_missing_hours": 7,
+      "observed_count": 8771
+    },
+    "DPD": {
+      "missing_fraction": 0.0015938069216757742,
+      "longest_missing_hours": 7,
+      "observed_count": 8770
+    },
+    "APD": {
+      "missing_fraction": 0.0014799635701275046,
+      "longest_missing_hours": 7,
+      "observed_count": 8771
+    },
+    "PRES": {
+      "missing_fraction": 0.0,
+      "longest_missing_hours": 0,
+      "observed_count": 8784
+    },
+    "ATMP": {
+      "missing_fraction": 0.0010245901639344263,
+      "longest_missing_hours": 5,
+      "observed_count": 8775
+    },
+    "WTMP": {
+      "missing_fraction": 0.0007969034608378871,
+      "longest_missing_hours": 3,
+      "observed_count": 8777
+    },
+    "DEWP": {
+      "missing_fraction": 0.0010245901639344263,
+      "longest_missing_hours": 5,
+      "observed_count": 8775
+    },
+    "VIS": {
+      "missing_fraction": 1.0,
+      "longest_missing_hours": 8784,
+      "observed_count": 0
+    },
+    "TIDE": {
+      "missing_fraction": 1.0,
+      "longest_missing_hours": 8784,
+      "observed_count": 0
+    }
+  }
+}

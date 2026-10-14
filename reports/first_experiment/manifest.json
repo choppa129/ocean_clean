@@ -1,0 +1,54 @@
+{
+  "station": "41009",
+  "year": 2024,
+  "target": "WTMP",
+  "unit": "degrees Celsius",
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "requested_blocks_per_split": 20,
+  "gap_hours": [
+    1,
+    6,
+    24,
+    72
+  ],
+  "mode": "offline; both gap endpoints allowed",
+  "training": "separate model per gap length and seed",
+  "splits": {
+    "train": {
+      "start": "2024-01-01 00:00:00+00:00",
+      "end": "2024-08-07 13:00:00+00:00",
+      "rows": 5270
+    },
+    "validation": {
+      "start": "2024-08-07 14:00:00+00:00",
+      "end": "2024-10-19 18:00:00+00:00",
+      "rows": 1757
+    },
+    "test": {
+      "start": "2024-10-19 19:00:00+00:00",
+      "end": "2024-12-31 23:00:00+00:00",
+      "rows": 1757
+    }
+  },
+  "versions": {
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "scipy": "1.17.0",
+    "scikit-learn": "1.8.0"
+  },
+  "python": "3.12.14",
+  "source": {
+    "source": "https://dods.ndbc.noaa.gov/thredds/fileServer/data/stdmet/41009/41009h2024.nc",
+    "sha256": "76d6af91609080e8350a1643c48321aced6c9a3c2c704c2e8aee0dea86ebeb66",
+    "station": "41009",
+    "year": 2024,
+    "rows": 52692,
+    "format": "netcdf",
+    "download_or_cache_check_utc": "2026-10-14T00:49:54.289478+00:00"
+  },
+  "csv_sha256": "13ebf63487aa401abef1d31494ebd4a3a58f88c792e7c68cf71c533dab52b9ee"
+}
