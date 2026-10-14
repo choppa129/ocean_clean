@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="380" viewBox="0 0 1200 380">
+<defs><linearGradient id="bg"><stop stop-color="#071521"/><stop offset="1" stop-color="#123947"/></linearGradient></defs>
+<rect width="1200" height="380" rx="20" fill="url(#bg)"/>
+<g fill="none" stroke="#3dd6c6" opacity=".13"><path d="M0 270 Q150 180 300 260 T600 260 T900 260 T1200 260"/><path d="M0 290 Q150 200 300 280 T600 280 T900 280 T1200 280"/><path d="M0 310 Q150 220 300 300 T600 300 T900 300 T1200 300"/></g>
+<text x="60" y="65" font-family="sans-serif" font-size="14" fill="#3dd6c6" letter-spacing="3">OCEAN OBSERVATIONS / MACHINE LEARNING</text>
+<text x="56" y="155" font-family="sans-serif" font-size="76" font-weight="700" fill="#eef7fa">OceanClean</text>
+<text x="60" y="205" font-family="sans-serif" font-size="25" fill="#aec6d2">Recover the signal. Keep the evidence.</text>
+<text x="60" y="333" font-family="sans-serif" font-size="14" fill="#aec6d2">REAL NOAA DATA     /     REPRODUCIBLE BENCHMARKS     /     HONEST EVALUATION</text>
+<rect x="800" y="80" width="330" height="165" rx="14" fill="#071521" opacity=".65"/>
+<path d="M825 185 L852 164 L878 177 L900 125 L925 147" stroke="#3dd6c6" stroke-width="4" fill="none"/>
+<path d="M925 147 L1000 166" stroke="#ffba70" stroke-width="3" stroke-dasharray="7 6" fill="none"/>
+<path d="M1000 166 L1025 149 L1050 172 L1075 136 L1105 155" stroke="#3dd6c6" stroke-width="4" fill="none"/>
+<text x="823" y="224" font-family="sans-serif" font-size="12" fill="#aec6d2">OBSERVED</text><text x="944" y="224" font-family="sans-serif" font-size="12" fill="#ffba70">GAP</text>
+</svg>
