@@ -12,6 +12,14 @@ Real public data. Explicit missingness. Reproducible experiments. Results you ca
 
 <p align="center"><a href="#explore-the-results">Explorer</a> · <a href="#what-the-experiment-found">Results</a> · <a href="#reproduce-the-experiment">Reproduce</a> · <a href="reports/multiyear/README.md">Experiment report</a> · <a href="docs/technical_guide.md">Technical guide</a></p>
 
+## Deep-learning track · new
+
+[Masked spatiotemporal Transformer](reports/transformer/README.md): direct missing-value
+reconstruction from observed values and masks, with temporal and cross-buoy attention.
+Includes training, validation-selected weights and a window reconstruction command.
+This is an early model, not a demonstrated improvement over the benchmarks below.
+The dashboard currently displays the earlier baseline experiments only.
+
 ## The question
 
 **When a buoy stops reporting water temperature, can nearby observations help
