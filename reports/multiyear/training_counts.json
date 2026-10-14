@@ -1,0 +1,130 @@
+[
+  {
+    "scenario": "sensor",
+    "gap_hours": 1,
+    "augmented_rows": 1200,
+    "unique_target_hours": 1171,
+    "blocks_per_round": [
+      150,
+      150,
+      150,
+      150,
+      150,
+      150,
+      150,
+      150
+    ]
+  },
+  {
+    "scenario": "sensor",
+    "gap_hours": 6,
+    "augmented_rows": 7200,
+    "unique_target_hours": 5965,
+    "blocks_per_round": [
+      150,
+      150,
+      150,
+      150,
+      150,
+      150,
+      150,
+      150
+    ]
+  },
+  {
+    "scenario": "sensor",
+    "gap_hours": 24,
+    "augmented_rows": 28800,
+    "unique_target_hours": 14043,
+    "blocks_per_round": [
+      150,
+      150,
+      150,
+      150,
+      150,
+      150,
+      150,
+      150
+    ]
+  },
+  {
+    "scenario": "sensor",
+    "gap_hours": 72,
+    "augmented_rows": 43344,
+    "unique_target_hours": 15100,
+    "blocks_per_round": [
+      89,
+      88,
+      87,
+      83,
+      63,
+      64,
+      61,
+      67
+    ]
+  },
+  {
+    "scenario": "station",
+    "gap_hours": 1,
+    "augmented_rows": 1200,
+    "unique_target_hours": 1171,
+    "blocks_per_round": [
+      150,
+      150,
+      150,
+      150,
+      150,
+      150,
+      150,
+      150
+    ]
+  },
+  {
+    "scenario": "station",
+    "gap_hours": 6,
+    "augmented_rows": 7200,
+    "unique_target_hours": 5965,
+    "blocks_per_round": [
+      150,
+      150,
+      150,
+      150,
+      150,
+      150,
+      150,
+      150
+    ]
+  },
+  {
+    "scenario": "station",
+    "gap_hours": 24,
+    "augmented_rows": 28800,
+    "unique_target_hours": 14043,
+    "blocks_per_round": [
+      150,
+      150,
+      150,
+      150,
+      150,
+      150,
+      150,
+      150
+    ]
+  },
+  {
+    "scenario": "station",
+    "gap_hours": 72,
+    "augmented_rows": 43344,
+    "unique_target_hours": 15100,
+    "blocks_per_round": [
+      89,
+      88,
+      87,
+      83,
+      63,
+      64,
+      61,
+      67
+    ]
+  }
+]

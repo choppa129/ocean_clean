@@ -1,0 +1,10 @@
+{
+  "python": "3.12.14",
+  "packages": {
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "scipy": "1.17.0",
+    "scikit-learn": "1.8.0"
+  },
+  "protocol_sha256": "29f852aa7a964af833c60fb9eca0ec07c14c0fd81df28a0c20e23c67af40e3e3"
+}

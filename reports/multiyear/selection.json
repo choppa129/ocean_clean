@@ -1,0 +1,10 @@
+{
+  "sensor/1": "linear",
+  "sensor/6": "linear",
+  "sensor/24": "residual_neighbors",
+  "sensor/72": "linear",
+  "station/1": "linear",
+  "station/6": "linear",
+  "station/24": "linear",
+  "station/72": "linear"
+}

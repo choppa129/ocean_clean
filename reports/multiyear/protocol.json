@@ -1,0 +1,43 @@
+{
+  "target_station": "41009",
+  "neighbors": [
+    "41010"
+  ],
+  "train_years": [
+    2022,
+    2023
+  ],
+  "validation_year": 2024,
+  "test_year": 2025,
+  "gap_hours": [
+    1,
+    6,
+    24,
+    72
+  ],
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "evaluation_blocks": 40,
+  "training_rounds_per_year": 4,
+  "training_blocks_requested_per_round": 150,
+  "task": "offline reconstruction; future gap endpoints allowed",
+  "models": [
+    "linear",
+    "residual_local",
+    "residual_neighbors"
+  ],
+  "hyperparameters": {
+    "max_iter": 150,
+    "max_leaf_nodes": 15,
+    "min_samples_leaf": 20,
+    "learning_rate": 0.05,
+    "l2_regularization": 1.0,
+    "early_stopping": false,
+    "random_state": 42
+  },
+  "selection": "per scenario/gap lowest mean validation MAE; linear included",
+  "notes": "Same fixed models evaluated on 3 masks; seed spread is not an independent-data confidence interval."
+}

@@ -1,0 +1,56 @@
+{
+  "41009/2022": {
+    "source": "https://dods.ndbc.noaa.gov/thredds/fileServer/data/stdmet/41009/41009h2022.nc",
+    "sha256": "997fd645d0ae655cb5b02fcb3293ff3567852bf2acad4c4a013517819173911b",
+    "station": "41009",
+    "year": 2022,
+    "rows": 52528,
+    "format": "netcdf",
+    "download_or_cache_check_utc": "2026-10-14T01:05:03.180186+00:00"
+  },
+  "41010/2022": {
+    "source": "https://dods.ndbc.noaa.gov/thredds/fileServer/data/stdmet/41010/41010h2022.nc",
+    "sha256": "bf9df0b378ced51f0a815bd321cc356fa8206260507f21e066e0fd79a9da3227",
+    "station": "41010",
+    "year": 2022,
+    "rows": 52473,
+    "format": "netcdf",
+    "download_or_cache_check_utc": "2026-10-14T01:05:03.786277+00:00"
+  },
+  "41009/2023": {
+    "source": "https://dods.ndbc.noaa.gov/thredds/fileServer/data/stdmet/41009/41009h2023.nc",
+    "sha256": "02dde5ed6411f9f639df733dade423316c3febc9aa73456e17efd52734bee265",
+    "station": "41009",
+    "year": 2023,
+    "rows": 52442,
+    "format": "netcdf",
+    "download_or_cache_check_utc": "2026-10-14T01:05:04.389708+00:00"
+  },
+  "41010/2023": {
+    "source": "https://dods.ndbc.noaa.gov/thredds/fileServer/data/stdmet/41010/41010h2023.nc",
+    "sha256": "a807ca0ef4da4a99dacd8b6e35d9223557d0b361bac6b03bb36d354b97b7379f",
+    "station": "41010",
+    "year": 2023,
+    "rows": 15837,
+    "format": "netcdf",
+    "download_or_cache_check_utc": "2026-10-14T01:05:04.582850+00:00"
+  },
+  "41009/2024": {
+    "source": "https://dods.ndbc.noaa.gov/thredds/fileServer/data/stdmet/41009/41009h2024.nc",
+    "sha256": "76d6af91609080e8350a1643c48321aced6c9a3c2c704c2e8aee0dea86ebeb66",
+    "station": "41009",
+    "year": 2024,
+    "rows": 52692,
+    "format": "netcdf",
+    "download_or_cache_check_utc": "2026-10-14T01:05:05.243374+00:00"
+  },
+  "41010/2024": {
+    "source": "https://dods.ndbc.noaa.gov/thredds/fileServer/data/stdmet/41010/41010h2024.nc",
+    "sha256": "03b0addddc6b92608f18122291d85b0338fb20ac0106f38cbf0db0bfb1f7f5a5",
+    "station": "41010",
+    "year": 2024,
+    "rows": 35171,
+    "format": "netcdf",
+    "download_or_cache_check_utc": "2026-10-14T01:05:05.670370+00:00"
+  }
+}
