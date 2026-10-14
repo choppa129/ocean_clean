@@ -42,3 +42,6 @@ experiments; do not claim that model complexity implies better reconstruction.
 
 Reproduce: `python scripts/compare_transformer.py` (install the deep and dashboard
 extras, and download both 2024 source CSVs first).
+
+Follow-up: [bias and neighbor-use diagnosis](../transformer_diagnostics/). The illustrated
+window has no observed neighbor channels; it cannot demonstrate neighbor benefit.

@@ -1,0 +1,25 @@
+{
+  "checkpoint_sha256": "857de8cd9bd6668509628d876842951e1e7225b840f85e59052b0cbf16c05ff0",
+  "source_sha256": {
+    "41009/2022": "10c0c38e356dbc693df9936a3848263c246424885b32713c741640ee1bdf2155",
+    "41010/2022": "b18e3cc508f69eeb9c00f2ed54814d6d4888fd46acef199312a5e9e32ca7d6b1",
+    "41009/2023": "7eb65a4b905d9b4258faea31248c499b7564520a71f3364597f8fe8278508947",
+    "41010/2023": "6711eb202361d19ce9e5ea2169621cea82aea438f2e6b1d6c6d6e40ec5de6e3a",
+    "41009/2024": "13ebf63487aa401abef1d31494ebd4a3a58f88c792e7c68cf71c533dab52b9ee",
+    "41010/2024": "e5bcff3d945ca705e140fbafe579755d54fd009b3ad0173323f6b3c37fc3ee14"
+  },
+  "normalization_matches_training": true,
+  "masked_target_hidden": true,
+  "validation_windows": 256,
+  "validation_seed": 777,
+  "shuffle_seed": 2026,
+  "example_window_id": 2,
+  "no_retraining": true,
+  "test_year_read": false,
+  "limitations": [
+    "2024 validation already used for checkpoint selection",
+    "Windows overlap; do not interpret as independent samples",
+    "Input perturbations may be out of distribution; not a retrained single-station comparison",
+    "Gap-specific means weight each equal-length window equally; macro averages weight gaps equally"
+  ]
+}

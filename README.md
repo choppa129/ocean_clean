@@ -127,6 +127,9 @@ training contexts, not the number of independent measurements.
 256 validation windows. The current Transformer has higher error than interpolation
 on these windows; model complexity has not yet translated into better accuracy.
 
+[Bias and neighbor-use diagnosis](reports/transformer_diagnostics/) explains input
+perturbation results, missing neighbor coverage, and weak sensitivity to time ordering.
+
 ## Project map
 
 | Location | Purpose |
