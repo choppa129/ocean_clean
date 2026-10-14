@@ -1,0 +1,126 @@
+{
+  "41009": {
+    "rows": 8760,
+    "start": "2025-01-01 00:00:00+00:00",
+    "end": "2025-12-31 23:00:00+00:00",
+    "variables": {
+      "WSPD": {
+        "missing_fraction": 0.024885844748858448,
+        "longest_missing_hours": 117,
+        "observed_count": 8542
+      },
+      "GST": {
+        "missing_fraction": 0.024885844748858448,
+        "longest_missing_hours": 117,
+        "observed_count": 8542
+      },
+      "WVHT": {
+        "missing_fraction": 0.18504566210045661,
+        "longest_missing_hours": 305,
+        "observed_count": 7139
+      },
+      "DPD": {
+        "missing_fraction": 0.18504566210045661,
+        "longest_missing_hours": 305,
+        "observed_count": 7139
+      },
+      "APD": {
+        "missing_fraction": 0.18504566210045661,
+        "longest_missing_hours": 305,
+        "observed_count": 7139
+      },
+      "PRES": {
+        "missing_fraction": 0.0009132420091324201,
+        "longest_missing_hours": 8,
+        "observed_count": 8752
+      },
+      "ATMP": {
+        "missing_fraction": 0.04337899543378995,
+        "longest_missing_hours": 124,
+        "observed_count": 8380
+      },
+      "WTMP": {
+        "missing_fraction": 0.006050228310502283,
+        "longest_missing_hours": 26,
+        "observed_count": 8707
+      },
+      "DEWP": {
+        "missing_fraction": 0.04337899543378995,
+        "longest_missing_hours": 124,
+        "observed_count": 8380
+      },
+      "VIS": {
+        "missing_fraction": 1.0,
+        "longest_missing_hours": 8760,
+        "observed_count": 0
+      },
+      "TIDE": {
+        "missing_fraction": 1.0,
+        "longest_missing_hours": 8760,
+        "observed_count": 0
+      }
+    }
+  },
+  "41010": {
+    "rows": 8760,
+    "start": "2025-01-01 00:00:00+00:00",
+    "end": "2025-12-31 23:00:00+00:00",
+    "variables": {
+      "WSPD": {
+        "missing_fraction": 0.4197488584474886,
+        "longest_missing_hours": 3672,
+        "observed_count": 5083
+      },
+      "GST": {
+        "missing_fraction": 0.4197488584474886,
+        "longest_missing_hours": 3672,
+        "observed_count": 5083
+      },
+      "WVHT": {
+        "missing_fraction": 0.4215753424657534,
+        "longest_missing_hours": 3672,
+        "observed_count": 5067
+      },
+      "DPD": {
+        "missing_fraction": 0.4215753424657534,
+        "longest_missing_hours": 3672,
+        "observed_count": 5067
+      },
+      "APD": {
+        "missing_fraction": 0.4215753424657534,
+        "longest_missing_hours": 3672,
+        "observed_count": 5067
+      },
+      "PRES": {
+        "missing_fraction": 0.4197488584474886,
+        "longest_missing_hours": 3672,
+        "observed_count": 5083
+      },
+      "ATMP": {
+        "missing_fraction": 0.41997716894977166,
+        "longest_missing_hours": 3672,
+        "observed_count": 5081
+      },
+      "WTMP": {
+        "missing_fraction": 0.42077625570776256,
+        "longest_missing_hours": 3672,
+        "observed_count": 5074
+      },
+      "DEWP": {
+        "missing_fraction": 0.41997716894977166,
+        "longest_missing_hours": 3672,
+        "observed_count": 5081
+      },
+      "VIS": {
+        "missing_fraction": 1.0,
+        "longest_missing_hours": 8760,
+        "observed_count": 0
+      },
+      "TIDE": {
+        "missing_fraction": 1.0,
+        "longest_missing_hours": 8760,
+        "observed_count": 0
+      }
+    }
+  }
+}

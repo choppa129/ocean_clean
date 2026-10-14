@@ -1,0 +1,9 @@
+scenario,gap_hours,model,mae
+sensor,1,linear,0.03608336713578953
+sensor,6,linear,0.11793482379938558
+sensor,24,residual_neighbors,0.2855678854939531
+sensor,72,linear,0.4560338271404107
+station,1,linear,0.03608336713578953
+station,6,linear,0.11793482379938558
+station,24,linear,0.28287718193442735
+station,72,linear,0.4560338271404107

@@ -9,6 +9,13 @@ Can weather observations help reconstruct missing sea-water temperature? When do
 long outages make simple interpolation unreliable? This repository establishes a
 controlled benchmark before adding neighboring buoys and learned reliability weights.
 
+## Expanded independent-year experiment
+
+[2022–2025 multi-station report](reports/multiyear/README.md): train on 2022–2023,
+select on 2024, evaluate on 2025. Added station 41010 and expanded training to
+1,200–43,344 augmented rows per gap model. Neighbor residual learning still does
+not outperform linear interpolation on the independent test.
+
 ## First real-data results
 
 [41009 / 2024 experiment report](reports/first_experiment/README.md): 52,692 raw
@@ -59,9 +66,9 @@ real missing data. Sampling may yield fewer blocks than requested; actual counts
 are reported. Archive observations are references, not perfect physical truth.
 
 The first model uses contemporaneous non-target scalar variables and a masked
-interpolation feature. Station outages remove these covariates too. Neighboring
-stations, predictive intervals, event preservation metrics, and neural networks are
-**not implemented yet**. Wind/wave directions are excluded before hourly averaging
+interpolation feature. Station outages remove these covariates too. The original single-year CLI does not use neighbors. The new
+`run_multiyear.py` experiment adds one neighbor and residual learning. Predictive
+intervals, event preservation metrics, and neural networks are **not implemented yet**. Wind/wave directions are excluded before hourly averaging
 because circular quantities require different aggregation.
 
 ## Data and sources

@@ -1,0 +1,20 @@
+{
+  "41009": {
+    "source": "https://dods.ndbc.noaa.gov/thredds/fileServer/data/stdmet/41009/41009h2025.nc",
+    "sha256": "0b5a8922df8c39c7a7d898882926d924cbf7979358404a0b168ee179557d1895",
+    "station": "41009",
+    "year": 2025,
+    "rows": 52489,
+    "format": "netcdf",
+    "download_or_cache_check_utc": "2026-10-14T01:05:24.428646+00:00"
+  },
+  "41010": {
+    "source": "https://dods.ndbc.noaa.gov/thredds/fileServer/data/stdmet/41010/41010h2025.nc",
+    "sha256": "5a7dd9c7ec41f9514c53c0e1f654a1f9d73ae3ba9e903c82e2f7292ab97274c8",
+    "station": "41010",
+    "year": 2025,
+    "rows": 30485,
+    "format": "netcdf",
+    "download_or_cache_check_utc": "2026-10-14T01:05:24.799014+00:00"
+  }
+}
